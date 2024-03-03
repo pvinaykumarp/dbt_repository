@@ -7,7 +7,7 @@ with customers as (
         last_name
 
     from raw.jaffle_shop.customers
-
+    -- select * from {{ ref('stg_customers') }}
 ),
 
 orders as (
@@ -19,7 +19,7 @@ orders as (
         status
 
     from raw.jaffle_shop.orders
-
+    -- select * from {{ ref('stg_orders') }}
 ),
 
 customer_orders as (
